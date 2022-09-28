@@ -13,7 +13,7 @@ var commentIdentifier = (function() {
         identify: function(node) {
             var inner = node.innerHTML;
 
-            if(inner.search("Moderator badge") !== -1){
+            if(inner.search("Moderator badge") !== -1 || inner.search("data-badge=\"moderator\"") !== -1){
                 monitor.stickComment(node);
             }
         }
